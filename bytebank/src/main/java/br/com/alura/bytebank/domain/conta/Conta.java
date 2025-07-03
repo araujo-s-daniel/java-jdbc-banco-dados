@@ -31,10 +31,6 @@ public class Conta {
         this.saldo = this.saldo.subtract(valor);
     }
 
-    public void depositar(BigDecimal valor) {
-        this.saldo = this.saldo.add(valor);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,9 +59,5 @@ public class Conta {
 
     public BigDecimal getSaldo() {
         return saldo;
-    }
-
-    public Cliente getTitular() {
-        return titular;
     }
 }

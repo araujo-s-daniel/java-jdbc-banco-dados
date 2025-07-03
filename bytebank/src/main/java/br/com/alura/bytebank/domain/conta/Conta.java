@@ -7,14 +7,20 @@ import java.util.Objects;
 
 public class Conta {
 
-    private Integer numero;
+    private final Integer numero;
     private BigDecimal saldo;
-    private Cliente titular;
+    private final Cliente titular;
 
     public Conta(Integer numero, Cliente titular) {
         this.numero = numero;
         this.titular = titular;
         this.saldo = BigDecimal.ZERO;
+    }
+
+    public Conta(Integer numero, BigDecimal saldo, Cliente titular) {
+        this.numero = numero;
+        this.saldo = saldo;
+        this.titular = titular;
     }
 
     public boolean possuiSaldo() {

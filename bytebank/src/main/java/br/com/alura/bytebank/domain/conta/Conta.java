@@ -8,13 +8,15 @@ import java.util.Objects;
 public class Conta {
 
     private final Integer numero;
-    private BigDecimal saldo;
+    private final BigDecimal saldo;
     private final Cliente titular;
+    private final Boolean estaAtiva;
 
-    public Conta(Integer numero, BigDecimal saldo, Cliente titular) {
+    public Conta(Integer numero, BigDecimal saldo, Cliente titular, Boolean estaAtiva) {
         this.numero = numero;
         this.saldo = saldo;
         this.titular = titular;
+        this.estaAtiva = estaAtiva;
     }
 
     public boolean possuiSaldo() {
@@ -49,5 +51,9 @@ public class Conta {
 
     public BigDecimal getSaldo() {
         return saldo;
+    }
+
+    public Boolean getEstaAtiva() {
+        return estaAtiva;
     }
 }

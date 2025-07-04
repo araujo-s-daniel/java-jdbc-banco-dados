@@ -10,3 +10,5 @@ CREATE TABLE conta (
     cliente_email VARCHAR(50),
     PRIMARY KEY (numero)
 );
+
+ALTER TABLE conta ADD COLUMN esta_ativa BOOLEAN DEFAULT TRUE;
